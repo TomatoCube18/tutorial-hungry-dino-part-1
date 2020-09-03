@@ -34,11 +34,6 @@
     dino.x = 0
 
 ```
-```ghost
-
-let projectile: Sprite = null
-projectile.lifespan = 3000
-```
 
 ## Step 2
 ** Step 2**
