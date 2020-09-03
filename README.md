@@ -6,8 +6,8 @@
 **Here are the instructions to assist you throughout the live webinar. **
 1. Open the ``||sprites.Sprites||`` drawer, drag the  ``||variables.set mySprite||`` block into the ``||Loops:on start||``  block. 
 2. Click on the grey color oval, select **Gallery** view. Scroll to find the image of a dinosaur, select it and hit "OK". 
-3. Open the ``||controller.Controller||`` drawer, drag the ``||controller.move mySprite with buttons ||`` into the ``||Loops:on start||``. 
-4. Rename the character from **mySprite** to **dino**
+3. Rename the character from **mySprite** to **dino**
+4. Open the ``||controller.Controller||`` drawer, drag the ``||controller.move mySprite with buttons ||`` into the ``||Loops:on start||``. 
 5. Click on the **+** sign on ``||controller.move mySprite with buttons ||`` , change the value of **vx** from 100 to **50**, and **vy** from 100 to **0**.
 
 ### ~ tutorialhint
