@@ -541,8 +541,8 @@ Congratulations! You have completed today's tutorial.
 Test out your game. If it does not work, cross check your code with the one in the tutorial hint.
 
 ### ~ tutorialhint
-
-![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_10.png)
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_a.png)
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_b.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_13.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_14.png)
