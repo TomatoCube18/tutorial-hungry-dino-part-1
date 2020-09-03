@@ -31,11 +31,12 @@
         . . . . f f f . . f f f . . . . 
         `, SpriteKind.Player)
     controller.moveSprite(dino, 50, 0)
-```
-```ghost
-mySrite.X = 0
+    mySrite.X = 0
 let projectile: Sprite = null
 projectile.lifespan = 3000
+
+```
+```ghost
 
 ```
 
