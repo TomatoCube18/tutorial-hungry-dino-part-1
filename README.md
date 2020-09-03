@@ -411,7 +411,7 @@ projectile.lifespan = 3000
 3. Change the value from **0** to **290**
 
 ### ~ tutorialhint
-![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_8.png)
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_15.png)
 
 
 ## Step 8
