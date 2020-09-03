@@ -809,9 +809,7 @@ mySprite.x = 0</code></pre>
 ```blocks
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (dino.isHittingTile(CollisionDirection.Bottom)) {
         dino.vy = -140
-    }
 })
 
 ```
