@@ -1,1 +1,18 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="tN-Zv(@.r:]3ijMaGKA(" x="0" y="0"/></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="Az2+f__hGd{!RC1,;FuF">placeholder999</variable><variable id="CQjpUp=iR=x%piQY]Z@$">mySprite</variable><variable type="KIND_SpriteKind" id="(uh`I|0wMdF8,pyDR4+`">Player</variable><variable type="KIND_SpriteKind" id="q(^0x~zMr8ncSYlMW-zk">Projectile</variable><variable type="KIND_SpriteKind" id="~_;OXxK8JvBUCa3|TW.J">Food</variable><variable type="KIND_SpriteKind" id="s{r:J+CeiGsy{LPsVJ:Z">Enemy</variable></variables><block type="pxt-on-start" id="j^b)e6H$KW^K!RQe+A(R" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="}TFb71(7Ofn@DOji=EN1"><field name="VAR" id="Az2+f__hGd{!RC1,;FuF">placeholder999</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="J)ZQ[f-s`U.K)Od53|8S"><value name="img"><shadow type="screen_image_picker" id="n%:F^^esu*5WSi!lqO+Z"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="{RnZ9O9y(r94p5(?|Eph"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="Sprite_blockCombine_set" id="Ug1ZG$Q2B)3;qbxA!dpn"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get" id="nisA#kq5QoK|D!B}@xLS"><field name="VAR" id="Az2+f__hGd{!RC1,;FuF">placeholder999</field></block></value><value name="value"><shadow type="math_number" id="X5%dLu;MMrch?.PZ4qMr"><field name="NUM">0</field></shadow></value></block></next></block></statement></block></xml>

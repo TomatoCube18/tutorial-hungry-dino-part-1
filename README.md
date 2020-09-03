@@ -527,7 +527,9 @@ mySrite.X = 0
         . . . . . . . . . . . . . . . . 
         `, false)    
 dino.x = 0
+<pre><code class="lang-block">let mySprite: Sprite = null
 
+mySprite.x = 0</code></pre>
     dino.set(ay,290)
 ```    
 
