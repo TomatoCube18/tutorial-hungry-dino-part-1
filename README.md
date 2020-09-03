@@ -38,6 +38,9 @@
 
 let projectile: Sprite = null
 projectile.lifespan = 3000
+    if (projectile.isHittingTile(CollisionDirection.Bottom)) {
+        projectile.vy = -135
+    }
 ```
 
 ## Step 2
