@@ -34,6 +34,8 @@
 ```
 ```ghost
 mySrite.X = 0
+let projectile: Sprite = null
+projectile.lifespan = 3000
 
 ```
 
