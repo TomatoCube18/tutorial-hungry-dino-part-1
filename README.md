@@ -31,7 +31,6 @@
         . . . . f f f . . f f f . . . . 
         `, SpriteKind.Player)
     controller.moveSprite(dino, 50, 0)
-    dino.x = 0
 
 ```
 
@@ -409,133 +408,8 @@ projectile.lifespan = 3000
 3. Change the value from **0** to **290**
 
 ### ~ tutorialhint
-```blocks
-    dino = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f f . . 
-        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
-        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
-        . . . . f f 7 7 7 1 f 1 7 7 f . 
-        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
-        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
-        . . . f f 7 7 7 f f f f f f . . 
-        . . . 4 f 7 7 7 7 7 7 f . . . . 
-        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
-        . . f f 7 7 f 7 7 7 7 7 7 f . . 
-        . 4 4 f 7 7 7 7 d d 7 f . . . . 
-        4 f f 7 7 7 7 d d d 7 f . . . . 
-        f 7 7 7 7 7 7 d d d 7 f . . . . 
-        f f f f f 7 7 f f d 7 f . . . . 
-        . . . . f f f . . f f f . . . . 
-        `, SpriteKind.Player)
-    controller.moveSprite(dino, 50, 0)
-    scene.setBackgroundColor(1)
-    scene.setTileMap(img`
-        9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . 7 7 . . . . . . . . . 
-        . . . . . . . . . . e e e e e . . . . . 7 e e . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
-        7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
-        e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
-    scene.setTile(14, img`
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, true)
-    scene.setTile(7, img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        6 6 7 6 7 6 7 6 6 d 6 7 7 6 7 7 
-        d d 6 7 7 6 7 d d d 7 6 d 6 7 6 
-        d d d d d d 6 d d d d d d d 6 d 
-        d d d d d d d d d d d d d d d d 
-        d 1 1 d 1 d d d d d 1 d d d d d 
-        d 1 1 d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d b d d d d d d d 1 d 
-        d d d d d d d d d d d d d d d d 
-        d d b d d d d d d d d b b d d d 
-        d d d d d d d d d d d b b d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d 1 d d d d d d d d 
-        d d d d d d d d d d d d d d 1 d 
-        `, true)
-    scene.setTile(2, img`
-        c c c c c c c c c c c c c c c c 
-        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-        8 8 8 6 6 6 8 8 8 6 6 6 6 8 8 8 
-        6 6 8 8 8 6 6 6 6 6 6 8 8 8 8 6 
-        6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
-        9 9 6 6 6 6 6 9 9 9 9 6 6 6 9 9 
-        6 6 6 6 9 9 9 6 6 6 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        `, true)
-    scene.setTile(10, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . c . . . . . . . . . . 
-        . . . . . f 2 2 . . . . . . . . 
-        . . . . . f 2 2 2 2 2 . . . . . 
-        . . . . . f 2 2 2 2 2 2 2 2 . . 
-        . . . . . f 2 2 2 2 2 2 2 . . . 
-        . . . . . f 2 2 2 2 . . . . . . 
-        . . . . . f 2 . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . f f f . . . . . . . . . 
-        . . . f c c c f . . . . . . . . 
-        . . f c c c c c f . . . . . . . 
-        `, true)  
-    scene.setTile(9, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, false)    
-dino.x = 0
-<pre><code class="lang-block">let mySprite: Sprite = null
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_8.png)
 
-mySprite.x = 0</code></pre>
-    dino.set(ay,290)
-```    
 
 ## Step 8
 ** Step 8**
@@ -544,262 +418,15 @@ mySprite.x = 0</code></pre>
 3. Make sure the sprite is **dino**
 
 ### ~ tutorialhint
-```blocks
-    dino = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f f . . 
-        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
-        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
-        . . . . f f 7 7 7 1 f 1 7 7 f . 
-        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
-        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
-        . . . f f 7 7 7 f f f f f f . . 
-        . . . 4 f 7 7 7 7 7 7 f . . . . 
-        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
-        . . f f 7 7 f 7 7 7 7 7 7 f . . 
-        . 4 4 f 7 7 7 7 d d 7 f . . . . 
-        4 f f 7 7 7 7 d d d 7 f . . . . 
-        f 7 7 7 7 7 7 d d d 7 f . . . . 
-        f f f f f 7 7 f f d 7 f . . . . 
-        . . . . f f f . . f f f . . . . 
-        `, SpriteKind.Player)
-    controller.moveSprite(dino, 50, 0)
-    scene.setBackgroundColor(1)
-    scene.setTileMap(img`
-        9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . 7 7 . . . . . . . . . 
-        . . . . . . . . . . e e e e e . . . . . 7 e e . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
-        7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
-        e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
-    scene.setTile(14, img`
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, true)
-    scene.setTile(7, img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        6 6 7 6 7 6 7 6 6 d 6 7 7 6 7 7 
-        d d 6 7 7 6 7 d d d 7 6 d 6 7 6 
-        d d d d d d 6 d d d d d d d 6 d 
-        d d d d d d d d d d d d d d d d 
-        d 1 1 d 1 d d d d d 1 d d d d d 
-        d 1 1 d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d b d d d d d d d 1 d 
-        d d d d d d d d d d d d d d d d 
-        d d b d d d d d d d d b b d d d 
-        d d d d d d d d d d d b b d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d 1 d d d d d d d d 
-        d d d d d d d d d d d d d d 1 d 
-        `, true)
-    scene.setTile(2, img`
-        c c c c c c c c c c c c c c c c 
-        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-        8 8 8 6 6 6 8 8 8 6 6 6 6 8 8 8 
-        6 6 8 8 8 6 6 6 6 6 6 8 8 8 8 6 
-        6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
-        9 9 6 6 6 6 6 9 9 9 9 6 6 6 9 9 
-        6 6 6 6 9 9 9 6 6 6 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        `, true)
-    scene.setTile(10, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . c . . . . . . . . . . 
-        . . . . . f 2 2 . . . . . . . . 
-        . . . . . f 2 2 2 2 2 . . . . . 
-        . . . . . f 2 2 2 2 2 2 2 2 . . 
-        . . . . . f 2 2 2 2 2 2 2 . . . 
-        . . . . . f 2 2 2 2 . . . . . . 
-        . . . . . f 2 . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . f f f . . . . . . . . . 
-        . . . f c c c f . . . . . . . . 
-        . . f c c c c c f . . . . . . . 
-        `, true)  
-    scene.setTile(9, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, false)
-    dino.ay = 290    
-    scene.placeOnRandomTile(dino, 9)
-``` 
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_9.png)
+
 ## Step 9
 ** Step 9**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.camera follow sprite ||`` block into the ``||Loops:on start||``  block.
 2. Make sure the sprite is **dino**
 
-
 ### ~ tutorialhint
-```blocks
-    dino = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f f . . 
-        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
-        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
-        . . . . f f 7 7 7 1 f 1 7 7 f . 
-        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
-        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
-        . . . f f 7 7 7 f f f f f f . . 
-        . . . 4 f 7 7 7 7 7 7 f . . . . 
-        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
-        . . f f 7 7 f 7 7 7 7 7 7 f . . 
-        . 4 4 f 7 7 7 7 d d 7 f . . . . 
-        4 f f 7 7 7 7 d d d 7 f . . . . 
-        f 7 7 7 7 7 7 d d d 7 f . . . . 
-        f f f f f 7 7 f f d 7 f . . . . 
-        . . . . f f f . . f f f . . . . 
-        `, SpriteKind.Player)
-    controller.moveSprite(dino, 50, 0)
-    scene.setBackgroundColor(1)
-    scene.setTileMap(img`
-        9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . 7 7 . . . . . . . . . 
-        . . . . . . . . . . e e e e e . . . . . 7 e e . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
-        7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
-        e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
-    scene.setTile(14, img`
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        d 1 d d d d d d d 1 d d d d d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        d d d d d 1 d d d d d d d 1 d d 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, true)
-    scene.setTile(7, img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        6 6 7 6 7 6 7 6 6 d 6 7 7 6 7 7 
-        d d 6 7 7 6 7 d d d 7 6 d 6 7 6 
-        d d d d d d 6 d d d d d d d 6 d 
-        d d d d d d d d d d d d d d d d 
-        d 1 1 d 1 d d d d d 1 d d d d d 
-        d 1 1 d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d b d d d d d d d 1 d 
-        d d d d d d d d d d d d d d d d 
-        d d b d d d d d d d d b b d d d 
-        d d d d d d d d d d d b b d d d 
-        d d d d d d d d d d d d d d d d 
-        d d d d d d d 1 d d d d d d d d 
-        d d d d d d d d d d d d d d 1 d 
-        `, true)
-    scene.setTile(2, img`
-        c c c c c c c c c c c c c c c c 
-        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-        8 8 8 6 6 6 8 8 8 6 6 6 6 8 8 8 
-        6 6 8 8 8 6 6 6 6 6 6 8 8 8 8 6 
-        6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
-        9 9 6 6 6 6 6 9 9 9 9 6 6 6 9 9 
-        6 6 6 6 9 9 9 6 6 6 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-        `, true)
-    scene.setTile(10, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . c . . . . . . . . . . 
-        . . . . . f 2 2 . . . . . . . . 
-        . . . . . f 2 2 2 2 2 . . . . . 
-        . . . . . f 2 2 2 2 2 2 2 2 . . 
-        . . . . . f 2 2 2 2 2 2 2 . . . 
-        . . . . . f 2 2 2 2 . . . . . . 
-        . . . . . f 2 . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . . f . . . . . . . . . . 
-        . . . . f f f . . . . . . . . . 
-        . . . f c c c f . . . . . . . . 
-        . . f c c c c c f . . . . . . . 
-        `, true)  
-    scene.setTile(9, img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, false)
-    dino.ay = 290    
-    scene.placeOnRandomTile(dino, 9)
-    scene.cameraFollowSprite(dino)
-``` 
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_10.png)
 
 ## Step 10
 ** Step 10**
@@ -808,15 +435,8 @@ mySprite.x = 0</code></pre>
 3. To mimick jumping, click on the **x** drop down menu, change **x** to **vy (velocity y))** 
 4. Change the value from **0** to **-140**
 
-
 ### ~ tutorialhint
-```blocks
-
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-        dino.vy = -140
-})
-
-```
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_11.png)
 
 
 
@@ -828,15 +448,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 4. Change **left** to **bottom**
 
 ### ~ tutorialhint
-```blocks
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12.png)
 
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (dino.isHittingTile(CollisionDirection.Bottom)) {
-        dino.vy = -140
-    }
-})
-
-```
 
 ## Step 12
 ** Step 12**
@@ -878,31 +491,9 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on left button pressed ||``  block.
 4. Click on the grey oval, select the dinosaur image looking at left.
 
+
 ### ~ tutorialhint
-```blocks
-
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    dino.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . f f f f f f f f . . . . . . 
-        . f 7 7 7 7 7 7 7 7 f 4 . . . . 
-        . f 7 7 1 f 1 7 7 7 f 4 . . . . 
-        . f 7 7 1 f 1 7 7 7 f f . . . . 
-        . f 7 7 1 1 1 7 7 7 f 4 . . . . 
-        . f 7 7 7 7 7 f 7 7 f 4 4 . . . 
-        . . f f f f f f 7 7 7 f f . . . 
-        . . . . f 7 7 7 7 7 7 f 4 . . . 
-        . . f 7 7 7 7 7 7 f 7 f 4 4 . . 
-        . . f 7 7 7 7 7 7 f 7 7 f f . . 
-        . . . . f 7 d d 7 7 7 7 f 4 4 . 
-        . . . . f 7 d d d 7 7 7 7 f f 4 
-        . . . . f 7 d d d 7 7 7 7 7 7 f 
-        . . . . f 7 d f f 7 7 f f f f f 
-        . . . . f f f . . f f f . . . . 
-        `)
-})
-
-```
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_13.png)
 
 ```ghost
 
@@ -936,31 +527,9 @@ projectile.setImage(img`
 4. Click on the grey oval, select the dinosaur image looking at right.
 
 
+
 ### ~ tutorialhint
-```blocks
-
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    dino.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f f . . 
-        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
-        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
-        . . . . f f 7 7 7 1 f 1 7 7 f . 
-        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
-        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
-        . . . f f 7 7 7 f f f f f f . . 
-        . . . 4 f 7 7 7 7 7 7 f . . . . 
-        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
-        . . f f 7 7 f 7 7 7 7 7 7 f . . 
-        . 4 4 f 7 7 7 7 d d 7 f . . . . 
-        4 f f 7 7 7 7 d d d 7 f . . . . 
-        f 7 7 7 7 7 7 d d d 7 f . . . . 
-        f f f f f 7 7 f f d 7 f . . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
-})
-
-```
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_14.png)
 
 
 ## Step 16
