@@ -3,7 +3,7 @@
 # tutorial
 
 ## Step 1
-**Here are the instructions to assist you throughout the live webinar. **
+**bello Here are the instructions to assist you throughout the live webinar. **
 1. Open the ``||sprites.Sprites||`` drawer, drag the  ``||variables.set mySprite||`` block into the ``||Loops:on start||``  block. 
 2. Click on the grey color oval, select **Gallery** view. Scroll to find the image of a dinosaur, select it and hit "OK". 
 3. Rename the character from **mySprite** to **dino**
