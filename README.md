@@ -32,8 +32,13 @@
         `, SpriteKind.Player)
     controller.moveSprite(dino, 50, 0)
 ```
+```ghost
+mySrite.X = 0
+
+```
 
 ## Step 2
+** Step 2**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.set background color ||`` block into the ``||Loops:on start||``  block. Choose a color of your choice.
 2. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.set tile map to ||`` into the ``||Loops:on start||`` . 
 3. Click on the Grey color square.
@@ -66,11 +71,52 @@
 ```
 
 ## Step 3
+** Step 3**
 1. Draw the ground using **brown** color tile.
-2. Add another layer of grass using the **green** tile.
-3. Add **red** tile to represent the water where your Dino will be drown if it falls on these tiles.
-4. Add **purple** tile at the end to represent the flag (goal of the game).
-5. Add **light blue** tile on top to set the starting point of the game.
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_2.png)
+
+
+### ~ tutorialhint
+```blocks
+    dino = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f f f f f . . 
+        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
+        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
+        . . . . f f 7 7 7 1 f 1 7 7 f . 
+        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
+        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
+        . . . f f 7 7 7 f f f f f f . . 
+        . . . 4 f 7 7 7 7 7 7 f . . . . 
+        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
+        . . f f 7 7 f 7 7 7 7 7 7 f . . 
+        . 4 4 f 7 7 7 7 d d 7 f . . . . 
+        4 f f 7 7 7 7 d d d 7 f . . . . 
+        f 7 7 7 7 7 7 d d d 7 f . . . . 
+        f f f f f 7 7 f f d 7 f . . . . 
+        . . . . f f f . . f f f . . . . 
+        `, SpriteKind.Player)
+    controller.moveSprite(dino, 50, 0)
+    scene.setBackgroundColor(1)
+    scene.setTileMap(img`
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . . e e . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . e e e . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . e e e e . . e e e . . . . 
+        e e e e e . . e e . . . . . . . e e e e e e e . . e e e . . e e 
+        `)    
+```
+
+
+## Step 4
+** Step 4**
+1. Add another layer of grass using the **green** tile.
+2. Add **red** tile to represent the water where your Dino will be drown if it falls on these tiles.
+3. Add **purple** tile at the end to represent the flag (goal of the game).
+4. Add **light blue** tile on top to set the starting point of the game.
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_4.png)
 
 ### ~ tutorialhint
@@ -107,13 +153,15 @@
         `)    
 ```
 
-## Step 4
+## Step 5
+** Step 5**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.set tile to with wall||`` block into the ``||Loops:on start||``  block.
 2. Click on the first grey color oval, choose brown color.
 3. Click on the second grey color oval, choose an image from the gallery to be the ground for your game.
 4. Toggle the wall **OFF** button to **ON**
 5. Repeat Step 1 - 4 above for grass (green), water (red), and flag (purple)
-5. For the flag, you can draw it out using the editor.
+6. For the flag, you can draw it out using the editor.
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_6.png)
 
 ### ~ tutorialhint
 ```blocks
@@ -221,7 +269,8 @@
         `, true)  
 ```
 
-## Step 5
+## Step 6
+** Step 6**
 1. Repeat the same step for light blue color tile. But this time, leave the second oval empty.
 2. And leave the wall **OFF**
 
@@ -349,7 +398,8 @@
         `, false)
 ```        
 
-## Step 6
+## Step 7
+** Step 7**
 1. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite X to||`` block into the ``||Loops:on start||``  block.
 2. To mimick gravity, click on the **x** drop down menu, change **x** to **ay(acceleration y)**
 3. Change the value from **0** to **290**
@@ -475,11 +525,14 @@
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, false)
-    dino.ay = 290    
+        `, false)    
+dino.x = 0
+
+    dino.set(ay,290)
 ```    
 
-## Step 7
+## Step 8
+** Step 8**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.place mySprite on top of random ||`` block into the ``||Loops:on start||``  block.
 2. Click on the grey oval, select light blue color
 3. Make sure the sprite is **dino**
@@ -609,7 +662,8 @@
     dino.ay = 290    
     scene.placeOnRandomTile(dino, 9)
 ``` 
-## Step 8
+## Step 9
+** Step 9**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.camera follow sprite ||`` block into the ``||Loops:on start||``  block.
 2. Make sure the sprite is **dino**
 
@@ -741,69 +795,88 @@
     scene.cameraFollowSprite(dino)
 ``` 
 
-## Step 9
+## Step 10
+** Step 10**
 1. Open the ``||controller.Controller||`` drawer, drag the  ``||controller.on A button pressed ||`` onto an empty area.
 2. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite X to||`` block into the ``||controller.on A button pressed ||``  block.
 3. To mimick jumping, click on the **x** drop down menu, change **x** to **vy (velocity y))** 
-4. Change the value from **0** to **-135**
+4. Change the value from **0** to **-140**
+
 
 ### ~ tutorialhint
-```Blocks
+```blocks
+
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-        dino.vy = -135
+    if (dino.isHittingTile(CollisionDirection.Bottom)) {
+        dino.vy = -140
+    }
 })
+
 ```
 
 
-## Step 10
+
+## Step 11
+** Step 11**
 1. Open the ``||logic.Logic||`` drawer, drag the  ``||logic.if true then ||`` block into the ``||controller.on A button pressed ||``  block.
 2. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.is sprite hitting wall left ||`` block onto the ``||logic:true||``  block.
 3. Change **mySprite** to **dino**
 4. Change **left** to **bottom**
 
 ### ~ tutorialhint
-```Blocks
+```blocks
+
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (dino.isHittingTile(CollisionDirection.Bottom)) {
-        dino.vy = -135
+        dino.vy = -140
     }
 })
+
 ```
 
-## Step 11
+## Step 12
+** Step 12**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.on sprite of kind Player hits wall ||`` block onto an empty area.
 2. Click the grey color oval, select **purple**
 3. Open the ``||game.Game||`` drawer, drag the  ``||game.game over ||`` block into the  ``||scene.on sprite of kind Player hits wall ||`` block.
 4. Toggle the button from **LOSE** to **WIN**.
 
 ### ~ tutorialhint
-```Blocks
+```blocks
+
 scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
     game.over(true)
 })
+
 ```
 
-## Step 12
+
+## Step 13
+** Step 13**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.on sprite of kind Player hits wall ||`` block onto an empty area.
 2. Click the grey color oval, select **red**
 3. Open the ``||game.Game||`` drawer, drag the  ``||game.game over ||`` block into the  ``||scene.on sprite of kind Player hits wall ||`` block.
 
 ### ~ tutorialhint
-```Blocks
-scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
+```blocks
+
+scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     game.over(false)
 })
+
 ```
 
-## Step 13
+
+## Step 14
+** Step 14**
 1. Open the ``||controller.Controller||`` drawer, drag the  ``||controller.on A button pressed ||`` onto an empty area.
 2. Change the button **A** to **left**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on left button pressed ||``  block.
 4. Click on the grey oval, select the dinosaur image looking at left.
 
-
 ### ~ tutorialhint
-```Blocks
+```blocks
+
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     dino.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -824,10 +897,13 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . f f f . . f f f . . . . 
         `)
 })
+
 ```
 
 
-## Step 14
+
+## Step 15
+** Step 15**
 1. Open the ``||controller.Controller||`` drawer, drag the  ``||controller.on A button pressed ||`` onto an empty area.
 2. Change the button **A** to **right**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on right button pressed ||``  block.
@@ -835,7 +911,8 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 
 
 ### ~ tutorialhint
-```Blocks
+```blocks
+
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     dino.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -856,9 +933,12 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . f f f . . f f f . . . . 
         `)
 })
+
 ```
 
-## Step 15
+
+## Step 16
+** Step 16**
 Congratulations! You have completed today's tutorial. 
 Test out your game. If it does not work, cross check your code with the one in the tutorial hint.
 
@@ -991,7 +1071,7 @@ Test out your game. If it does not work, cross check your code with the one in t
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (dino.isHittingTile(CollisionDirection.Bottom)) {
-        dino.vy = -135
+        dino.vy = -140
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1043,36 +1123,3 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
 })
 
 ```
-
-
-
-> Open this page at [https://tomatocube18.github.io/tutorial-hungry-dino-part-1/](https://tomatocube18.github.io/tutorial-hungry-dino-part-1/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/tomatocube18/tutorial-hungry-dino-part-1** and import
-
-## Edit this project ![Build status badge](https://github.com/tomatocube18/tutorial-hungry-dino-part-1/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/tomatocube18/tutorial-hungry-dino-part-1** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/tomatocube18/tutorial-hungry-dino-part-1/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
