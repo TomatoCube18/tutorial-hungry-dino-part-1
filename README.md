@@ -35,6 +35,12 @@
 
 ```
 
+```ghost
+
+let projectile: Sprite = null
+projectile.lifespan = 3000
+```
+
 ## Step 2
 ** Step 2**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.set background color ||`` block into the ``||Loops:on start||``  block. Choose a color of your choice.
@@ -898,6 +904,28 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ```
 
+```ghost
+
+let projectile: Sprite = null
+projectile.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . f f f f f f f f . . . . . . 
+        . f 7 7 7 7 7 7 7 7 f 4 . . . . 
+        . f 7 7 1 f 1 7 7 7 f 4 . . . . 
+        . f 7 7 1 f 1 7 7 7 f f . . . . 
+        . f 7 7 1 1 1 7 7 7 f 4 . . . . 
+        . f 7 7 7 7 7 f 7 7 f 4 4 . . . 
+        . . f f f f f f 7 7 7 f f . . . 
+        . . . . f 7 7 7 7 7 7 f 4 . . . 
+        . . f 7 7 7 7 7 7 f 7 f 4 4 . . 
+        . . f 7 7 7 7 7 7 f 7 7 f f . . 
+        . . . . f 7 d d 7 7 7 7 f 4 4 . 
+        . . . . f 7 d d d 7 7 7 7 f f 4 
+        . . . . f 7 d d d 7 7 7 7 7 7 f 
+        . . . . f 7 d f f 7 7 f f f f f 
+        . . . . f f f . . f f f . . . . 
+        `)
+```
 
 
 ## Step 15
