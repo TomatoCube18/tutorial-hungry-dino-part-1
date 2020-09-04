@@ -3,7 +3,7 @@
 # tutorial
 
 ## Step 1
-**bello Here are the instructions to assist you throughout the live webinar. **
+**Here are the instructions to assist you throughout the live webinar. **
 1. Open the ``||sprites.Sprites||`` drawer, drag the  ``||variables.set mySprite||`` block into the ``||Loops:on start||``  block. 
 2. Click on the grey color oval, select **Gallery** view. Scroll to find the image of a dinosaur, select it and hit "OK". 
 3. Rename the character from **mySprite** to **dino**
@@ -41,6 +41,7 @@ projectile.lifespan = 3000
     if (projectile.isHittingTile(CollisionDirection.Bottom)) {
         projectile.vy = -135
     }
+    
 ```
 
 ## Step 2
@@ -81,40 +82,6 @@ projectile.lifespan = 3000
 1. Draw the ground using **brown** color tile.
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_2.png)
 
-
-### ~ tutorialhint
-```blocks
-    dino = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f f . . 
-        . . . . 4 f 7 7 7 7 7 7 7 7 f . 
-        . . . . 4 f 7 7 7 1 f 1 7 7 f . 
-        . . . . f f 7 7 7 1 f 1 7 7 f . 
-        . . . . 4 f 7 7 7 1 1 1 7 7 f . 
-        . . . 4 4 f 7 7 f 7 7 7 7 7 f . 
-        . . . f f 7 7 7 f f f f f f . . 
-        . . . 4 f 7 7 7 7 7 7 f . . . . 
-        . . 4 4 f 7 f 7 7 7 7 7 7 f . . 
-        . . f f 7 7 f 7 7 7 7 7 7 f . . 
-        . 4 4 f 7 7 7 7 d d 7 f . . . . 
-        4 f f 7 7 7 7 d d d 7 f . . . . 
-        f 7 7 7 7 7 7 d d d 7 f . . . . 
-        f f f f f 7 7 f f d 7 f . . . . 
-        . . . . f f f . . f f f . . . . 
-        `, SpriteKind.Player)
-    controller.moveSprite(dino, 50, 0)
-    scene.setBackgroundColor(1)
-    scene.setTileMap(img`
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . . e e . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . . e e e . . . . . . . . . 
-        . . . . . . . . . . . . . . . . . . . e e e e . . e e e . . . . 
-        e e e e e . . e e . . . . . . . e e e e e e e . . e e e . . e e 
-        `)    
-```
 
 
 ## Step 4
@@ -519,6 +486,15 @@ projectile.setImage(img`
         . . . . f 7 d f f 7 7 f f f f f 
         . . . . f f f . . f f f . . . . 
         `)
+
+scene.placeOnRandomTile(projectile, 9)      
+scene.cameraFollowSprite(projectile)
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (projectile.isHittingTile(CollisionDirection.Bottom)) {
+        projectile.vy = -140
+    }
+})
 ```
 
 
