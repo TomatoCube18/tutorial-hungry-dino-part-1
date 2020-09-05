@@ -651,8 +651,9 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     game.over(false)
 })
 
-```
 
 scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
     game.over(true)
 })
+
+```
