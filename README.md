@@ -197,7 +197,7 @@ projectile.lifespan = 3000
         . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
         7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
         e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
+        `)    
     scene.setTile(14, img`
         d 1 d d d d d d d 1 d d d d d d 
         d 1 d d d d d d d 1 d d d d d d 
@@ -291,7 +291,7 @@ projectile.lifespan = 3000
         . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
         7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
         e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
+        `)    
     scene.setTile(14, img`
         d 1 d d d d d d d 1 d d d d d d 
         d 1 d d d d d d d 1 d d d d d d 
@@ -402,7 +402,7 @@ projectile.lifespan = 3000
         . . . . . . . . . . . . . . . . . . . 7 e e e . . 7 7 7 . . . a 
         7 7 7 7 7 . . 7 7 . . . . . . . 7 7 7 e e e e . . e e e . . 7 7 
         e e e e e 2 2 e e 2 2 2 2 2 2 2 e e e e e e e 2 2 e e e 2 2 e e 
-        `, TileScale.Sixteen)    
+        `)    
     scene.setTile(14, img`
         d 1 d d d d d d d 1 d d d d d d 
         d 1 d d d d d d d 1 d d d d d d 
