@@ -503,6 +503,9 @@ projectile.lifespan = 3000
 3. Change the value from **0** to **290**
 4. Make sure the sprite's name is **dino**
 
+Do you know you can also control the simulator using your keyboard?
+
+
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_15.png)
 
