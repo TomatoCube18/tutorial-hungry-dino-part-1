@@ -50,6 +50,7 @@ projectile.lifespan = 3000
 **Step 2**
 1. Open the ``||controller.Controller||`` drawer, drag the ``||controller.move mySprite with buttons ||`` into the ``||Loops:on start||``. 
 2. Click on the **+** sign on ``||controller.move mySprite with buttons ||`` , change the value of **vx** from 100 to **50**, and **vy** from 100 to **0**.
+3. Change the sprite's name from **mySprite** to **dino** (or any name of your choice)
 
 ### ~ tutorialhint
 ```blocks
@@ -500,6 +501,7 @@ projectile.lifespan = 3000
 1. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite X to||`` block into the ``||Loops:on start||``  block.
 2. To mimick gravity, click on the **x** drop down menu, change **x** to **ay(acceleration y)**
 3. Change the value from **0** to **290**
+4. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_15.png)
@@ -509,7 +511,7 @@ projectile.lifespan = 3000
 ** Step 10**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.place mySprite on top of random ||`` block into the ``||Loops:on start||``  block.
 2. Click on the grey oval, select light blue color
-3. Make sure the sprite is **dino**
+3. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_9.png)
@@ -517,7 +519,7 @@ projectile.lifespan = 3000
 ## Step 11
 ** Step 11**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.camera follow sprite ||`` block into the ``||Loops:on start||``  block.
-2. Make sure the sprite is **dino**
+2. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_10.png)
@@ -528,6 +530,7 @@ projectile.lifespan = 3000
 2. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite X to||`` block into the ``||controller.on A button pressed ||``  block.
 3. To mimick jumping, click on the **x** drop down menu, change **x** to **vy (velocity y))** 
 4. Change the value from **0** to **-140**
+5. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_11.png)
@@ -538,8 +541,8 @@ projectile.lifespan = 3000
 ** Step 13**
 1. Open the ``||logic.Logic||`` drawer, drag the  ``||logic.if true then ||`` block into the ``||controller.on A button pressed ||``  block.
 2. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.is sprite hitting wall left ||`` block onto the ``||logic:true||``  block.
-3. Change **mySprite** to **dino**
-4. Change **left** to **bottom**
+3. Change **left** to **bottom**
+4. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12.png)
@@ -584,6 +587,7 @@ scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
 2. Change the button **A** to **left**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on left button pressed ||``  block.
 4. Click on the grey oval, select the dinosaur image looking at left.
+5. Make sure the sprite's name is **dino**
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_13.png)
@@ -627,6 +631,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 2. Change the button **A** to **right**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on right button pressed ||``  block.
 4. Click on the grey oval, select the dinosaur image looking at right.
+5. Make sure the sprite's name is **dino**
 
 
 
