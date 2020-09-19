@@ -3,7 +3,7 @@
 # tutorial
 
 ## Step 1
-**v1.0: This guide is created to assist you throughout the live stream. **
+**v3.0: This guide is created to assist you throughout the live stream. **
 
 **Step 1**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.set background color ||`` block into the ``||Loops:on start||``  block. Choose a color of your choice.
@@ -643,9 +643,7 @@ Test out your game. If it does not work, cross check your code with the one in t
 
 ```blocks
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (projectile.isHittingTile(CollisionDirection.Bottom)) {
         projectile.vy = -140
-    }
 })
 
 scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
