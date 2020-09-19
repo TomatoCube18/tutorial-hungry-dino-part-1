@@ -539,20 +539,8 @@ Do you know you can also control the simulator using your keyboard?
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_11.png)
 
 
-
 ## Step 13
 ** Step 13**
-1. Open the ``||logic.Logic||`` drawer, drag the  ``||logic.if true then ||`` block into the ``||controller.on A button pressed ||``  block.
-2. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.is sprite hitting wall left ||`` block onto the ``||logic:true||``  block.
-3. Change **left** to **bottom**
-4. Make sure the sprite's name is **dino**
-
-### ~ tutorialhint
-![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12.png)
-
-
-## Step 14
-** Step 14**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.on sprite of kind Player hits wall ||`` block onto an empty area.
 2. Click the grey color oval, select **red**
 3. Open the ``||game.Game||`` drawer, drag the  ``||game.game over ||`` block into the  ``||scene.on sprite of kind Player hits wall ||`` block.
@@ -568,8 +556,8 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
 
 
 
-## Step 15
-** Step 15**
+## Step 14
+** Step 14**
 1. Open the ``||scene.Scene||`` drawer, drag the  ``||scene.on sprite of kind Player hits wall ||`` block onto an empty area.
 2. Click the grey color oval, select **purple**
 3. Open the ``||game.Game||`` drawer, drag the  ``||game.game over ||`` block into the  ``||scene.on sprite of kind Player hits wall ||`` block.
@@ -584,8 +572,8 @@ scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
 
 ```
 
-## Step 16
-** Step 16**
+## Step 15
+** Step 15**
 1. Open the ``||controller.Controller||`` drawer, drag the  ``||controller.on A button pressed ||`` onto an empty area.
 2. Change the button **A** to **left**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on left button pressed ||``  block.
@@ -628,8 +616,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 
 
-## Step 17
-** Step 17**
+## Step 16
+** Step 16**
 1. Open the ``||controller.Controller||`` drawer, drag the  ``||controller.on A button pressed ||`` onto an empty area.
 2. Change the button **A** to **right**
 3. Open the ``||sprites.Sprites||`` drawer, drag the  ``||sprites.set mySprite image to||`` block into the ``||controller.on right button pressed ||``  block.
@@ -642,19 +630,24 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_14.png)
 
 
-## Step 18
-** Step 18**
+## Step 17
+** Step 17**
 Congratulations! You have completed today's tutorial. 
 Test out your game. If it does not work, cross check your code with the one in the tutorial hint.
 
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_c.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_b.png)
-![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_13.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_14.png)
 
 ```blocks
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (projectile.isHittingTile(CollisionDirection.Bottom)) {
+        projectile.vy = -140
+    }
+})
+
 scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     game.over(false)
 })
