@@ -638,14 +638,11 @@ Test out your game. If it does not work, cross check your code with the one in t
 ### ~ tutorialhint
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_c.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_b.png)
+![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_12a.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_13.png)
 ![screenshots](https://raw.githubusercontent.com/TomatoCube18/tutorial-hungry-dino-part-1/master/assets/Screenshot_14.png)
 
 ```blocks
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-        projectile.vy = -140
-})
-
 scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     game.over(false)
 })
